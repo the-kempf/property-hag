@@ -15,6 +15,10 @@ Property Hag helps you browse and tidy the properties in your notes. A property 
 
 ![Property Hag Batch actions with operation, property, filters, value controls, and note selection](assets/property-hag-batch-screenshot.jpg)
 
+## What changed in 0.2.2 Beta
+
+This release keeps the behavior and interface of 0.2.1. It cleans up development files and documentation and packages the tested build for release. No new editing operations or interface changes were added.
+
 ## Install
 
 1. Download **main.js**, **manifest.json**, and **styles.css** from the **0.2.2 Beta** release.
@@ -23,7 +27,7 @@ Property Hag helps you browse and tidy the properties in your notes. A property 
 
 The logo and screen help are bundled in main.js. The complete distribution folder also includes separate assets, help files, and documentation for convenience.
 
-To update, replace the release files inside your existing plugin folder. Keep your local history and backups if you want to retain Undo.
+To update, replace **main.js**, **manifest.json**, and **styles.css** in your existing plugin folder, then restart Obsidian. Keep **data.json**, **history-backup.json**, and **backups/** together to retain Undo.
 
 ## Open Property Hag
 
@@ -67,9 +71,3 @@ The plugin makes no network requests. History and backups are stored locally in 
 The release contains no saved vault history or backups. Mobile support is deferred until device testing is complete.
 
 See [CHANGELOG.md](CHANGELOG.md) for release notes. Property Hag is licensed under the [MIT License](LICENSE). The bundled YAML library retains its separate ISC license in **assets/yaml-LICENSE.txt**.
-
-## Development
-
-Run `node tests/run-all.cjs` for regression checks and `node scripts/package-release.cjs` to refresh the release files in `dist`. The scripts folder also contains the YAML and resource bundlers; `node_modules` and the package lock support rebuilding the bundled YAML library.
-
-Review records are in [docs/PUBLIC-RELEASE-AUDIT.md](docs/PUBLIC-RELEASE-AUDIT.md), [docs/BATCH-WORKFLOW-REVIEW.md](docs/BATCH-WORKFLOW-REVIEW.md), and [docs/NATIVE-SMOKE-RESULTS.md](docs/NATIVE-SMOKE-RESULTS.md). These are development records and are not included in the release.
