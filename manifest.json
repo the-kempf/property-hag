@@ -1,0 +1,9 @@
+{
+  "id": "property-hag",
+  "name": "Property Hag",
+  "version": "0.2.2",
+  "minAppVersion": "1.5.7",
+  "description": "Browse vault properties, apply verified batch edits, and undo saved changes.",
+  "author": "Kempf",
+  "isDesktopOnly": true
+}
