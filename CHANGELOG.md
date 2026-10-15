@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.4 Beta — 10-14-2026
+
+- Update release metadata and distribution files to 0.2.4 Beta.
+- Plugin behavior and appearance are unchanged.
+
 ## 0.2.3 Beta — 10-14-2026
 
 - Keep the README focused on installation and use.
