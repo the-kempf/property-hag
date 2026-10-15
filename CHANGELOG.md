@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.3 Beta — 10-14-2026
+
+- Keep the README focused on installation and use.
+- Move development and publishing instructions into docs/DEVELOPMENT.md.
+- Refresh release metadata and distribution files; plugin behavior is unchanged.
+
 ## 0.2.2 Beta — 10-14-2026
 
 - Retain the verified 0.2.1 plugin behavior and appearance.
