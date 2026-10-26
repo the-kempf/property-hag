@@ -317,13 +317,6 @@
   margin-bottom: 16px;
 }
 
-.property-hag-details-actions {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 4px 0 16px;
-  font-size: var(--font-ui-small);
-}
-
 .property-hag-table-container {
   max-height: 60vh;
   overflow: auto;
@@ -345,6 +338,8 @@
 .property-hag-table th {
   position: sticky;
   top: 0;
+  /* Keep scrolling controls beneath the opaque sticky header. */
+  z-index: 3;
   background: var(--background-primary);
   white-space: nowrap;
   overflow-wrap: normal;
@@ -396,6 +391,9 @@
 }
 
 .property-hag-backup-link {
+  display: block;
+  max-width: 100%;
+  white-space: normal;
   font-size: var(--font-ui-small);
   margin-top: 8px;
 }
@@ -676,4 +674,67 @@
 
 @media (max-width: 600px) {
   .property-hag-form { grid-template-columns: 1fr; }
+}
+
+.property-hag-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+/* Mobile-only layout. Desktop rules above are deliberately unchanged. */
+.modal.property-hag-window.property-hag-mobile {
+  position: fixed !important;
+  margin: 0 !important;
+  transform: none !important;
+  box-sizing: border-box;
+  left: calc(var(--property-hag-mobile-left, 0px) + 8px) !important;
+  top: calc(var(--property-hag-mobile-top, 0px) + 8px) !important;
+  width: calc(var(--property-hag-mobile-width, 100vw) - 16px) !important;
+  height: calc(var(--property-hag-mobile-height, 100dvh) - 16px) !important;
+  max-width: none;
+  max-height: calc(var(--property-hag-mobile-height, 100dvh) - 16px) !important;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: max(16px, env(safe-area-inset-top, 0px));
+  padding-bottom: max(16px, env(safe-area-inset-bottom, 0px));
+}
+.property-hag-mobile .modal-title { flex: 0 0 auto; padding-right: 36px; overflow-wrap: anywhere; }
+.property-hag-mobile .modal-content { flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; }
+.property-hag-mobile .modal-close-button { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+.property-hag-mobile .property-hag-navigation { min-height: 44px; }
+.property-hag-mobile .property-hag-back { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+.property-hag-mobile :is(button, .property-hag-help-button) { min-height: 44px; min-width: 44px; touch-action: manipulation; white-space: normal; }
+.property-hag-mobile :is(input:not([type="checkbox"]), select, textarea) { font-size: max(16px, var(--font-ui-medium)); }
+.property-hag-mobile :is(input:not([type="checkbox"]), select) { min-height: 44px; }
+.property-hag-mobile input[type="checkbox"] { width: 24px; height: 24px; min-width: 24px; margin: 10px; touch-action: manipulation; }
+.property-hag-mobile .property-hag-suggestion { min-height: 44px; box-sizing: border-box; display: flex; align-items: center; touch-action: manipulation; }
+.property-hag-mobile .property-hag-suggestions { max-height: min(220px, 35dvh); }
+.property-hag-mobile :is(.property-hag-form, .property-hag-typed-editor) { grid-template-columns: 1fr; }
+.property-hag-mobile .property-hag-list-item { grid-template-columns: 80px minmax(0, 1fr) 44px; }
+.property-hag-mobile :is(.property-hag-toolbar, .property-hag-actions) { gap: 8px; }
+.property-hag-mobile .property-hag-table-container { max-height: none; overflow: auto; overscroll-behavior-x: contain; }
+.property-hag-mobile .property-hag-backup-text { height: 40dvh; min-height: 100px; }
+
+@media (max-width: 600px) {
+  .property-hag-mobile .property-hag-hero { grid-template-columns: 1fr; gap: 12px; padding-bottom: 16px; }
+  .property-hag-mobile .property-hag-logo { width: 100px; height: 110px; justify-self: center; }
+  .property-hag-mobile .property-hag-home-actions { grid-template-columns: 1fr; }
+  .property-hag-mobile .property-hag-introduction h1 { font-size: 28px; }
+  .property-hag-mobile .property-hag-table-container { overflow: visible; }
+  .property-hag-mobile .property-hag-table { display: block; width: 100%; min-width: 0; table-layout: auto; }
+  .property-hag-mobile .property-hag-table thead { display: block; position: sticky; top: 0; z-index: 3; background: var(--background-primary); }
+  .property-hag-mobile .property-hag-table thead tr { display: flex; flex-wrap: wrap; }
+  .property-hag-mobile .property-hag-table th { display: flex; align-items: center; position: static; min-height: 44px; flex: 1 1 auto; width: auto; padding: 8px; white-space: normal; border-right: 0; }
+  .property-hag-mobile .property-hag-table tbody { display: block; }
+  .property-hag-mobile .property-hag-table tbody tr { display: block; margin: 12px 0; padding: 8px; border: 1px solid var(--background-modifier-border); border-radius: var(--radius-m); }
+  .property-hag-mobile .property-hag-table td { display: block; width: auto; padding: 6px 8px; border: 0; text-align: left; white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; }
+  .property-hag-mobile .property-hag-table td::before { content: attr(data-hag-label); display: block; margin-bottom: 4px; color: var(--text-muted); font-size: var(--font-ui-small); font-weight: 600; }
+  .property-hag-mobile .property-hag-table td a { white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; }
+  .property-hag-mobile .property-hag-selection-table td:first-child { display: flex; align-items: center; gap: 8px; }
+  .property-hag-mobile .property-hag-selection-table td:first-child::before { margin-bottom: 0; }
+  .property-hag-mobile .property-hag-help-content :is(th, td) { padding: 8px; }
 }

@@ -57,3 +57,18 @@ Choose **Preview changes**. If unavailable, check your selection, property name,
 Save any unsaved notes, then choose **Refresh** to reload their current values. Notes that still match remain selected. Changed notes may be conflicts until refreshed.
 
 Use **Back** from Preview to adjust your choices. Apply is available there after review and a separate confirmation.
+
+For text and numeric **New value** fields, click or focus the input to see existing values for the selected property. Suggestions filter as you type, just like **Property name**. Choose a suggestion with the mouse or arrow keys and Enter, or type a new value. List-item operations suggest existing items of the selected type.
+
+## Search terms and operators
+
+Search is case-insensitive and matches parts of words. Use:
+
+- `toastmasters; tm` or `toastmasters OR tm` for either term.
+- `toastmasters AND speech` or `toastmasters speech` for both terms, in any order.
+- `toastmasters -archived` or `toastmasters NOT archived` to exclude archived matches.
+- `"public speaking"` for that exact phrase, with the words together.
+
+NOT/minus applies first, then AND, then OR/semicolon. For example, `toastmasters OR tm AND speech` matches toastmasters, or matches both tm and speech. To exclude archived results from both alternatives, use `toastmasters NOT archived OR tm NOT archived`. Operators also accept lowercase. Quote literal operator words or semicolons, such as `"AND"` or `"a;b"`.
+
+An unfinished or invalid query shows an error and matches nothing. In Batch actions, selections that no longer match are cleared. These operators apply to search bars; property/value suggestion dropdowns and the typed **Match value** filter continue to use literal values. Search still uses each screen's existing fields; it does not search all note content.

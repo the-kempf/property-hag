@@ -14,10 +14,17 @@ Choose **Refresh Undo preview** to reread notes. Choose **Undo ready notes**, re
 
 **Original backup** opens the original note for inspection or copying. It does not restore it.
 
-## For a simulation
-
-If you came from **Preview Undo (simulation)** before applying a batch, this is only an illustration. It saves nothing and the Undo button is disabled.
-
-Real Undo is available in **Batch history / Undo** after changes are saved and verified.
-
 Search or sort to review notes. Use **Back** to return to the previous screen.
+
+## Search terms and operators
+
+Search is case-insensitive and matches parts of words. Use:
+
+- `toastmasters; tm` or `toastmasters OR tm` for either term.
+- `toastmasters AND speech` or `toastmasters speech` for both terms, in any order.
+- `toastmasters -archived` or `toastmasters NOT archived` to exclude archived matches.
+- `"public speaking"` for that exact phrase, with the words together.
+
+NOT/minus applies first, then AND, then OR/semicolon. For example, `toastmasters OR tm AND speech` matches toastmasters, or matches both tm and speech. To exclude archived results from both alternatives, use `toastmasters NOT archived OR tm NOT archived`. Operators also accept lowercase. Quote literal operator words or semicolons, such as `"AND"` or `"a;b"`.
+
+An unfinished or invalid query shows an error and matches nothing. In Batch actions, selections that no longer match are cleared. These operators apply to search bars; property/value suggestion dropdowns and the typed **Match value** filter continue to use literal values. Search still uses each screen's existing fields; it does not search all note content.
