@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 — 10-27-2026
+
+- Fix oversized phone property cards: retain compact table rows and columns, with horizontal scrolling for wider tables. Desktop styling is unchanged.
+- Tighten mobile table spacing and remove repeated cell labels.
+- Verify rendered layouts at phone and tablet widths; all 15 automated checks pass.
+
 ## 1.0.0 — 10-26-2026
 
 - First 1.0.0 release for Obsidian desktop and mobile.

@@ -90,7 +90,7 @@ Undo restores property values; the affected entries’ spacing or placement may 
 
 On desktop, drag a window’s title to move it, drag its bottom-right corner to resize it, and drag table dividers to adjust column widths. Click headings to sort.
 
-On mobile, windows fit the screen and adjust for the keyboard and rotation. Forms stack vertically, controls are larger, and phone-sized tables show labeled cards. Tap headings to sort; tablets retain scrollable tables.
+On mobile, windows fit the screen and adjust for the keyboard and rotation. Forms stack vertically, controls are larger, and tables retain compact rows and columns, with horizontal scrolling when needed. Tap headings to sort; tablets retain scrollable tables.
 
 Mobile layouts and Apply/Undo flows have automated coverage. Physical Android and iPhone validation is still pending.
 
@@ -112,7 +112,7 @@ Property Hag makes no network requests. History and backups are stored locally i
 
 ## Version
 
-Current version: **1.0.0**. See [CHANGELOG.md](CHANGELOG.md) for release notes.
+Current version: **1.0.1**. See [CHANGELOG.md](CHANGELOG.md) for release notes.
 
 ## Author
 

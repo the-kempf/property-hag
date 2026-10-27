@@ -719,22 +719,23 @@
 .property-hag-mobile .property-hag-table-container { max-height: none; overflow: auto; overscroll-behavior-x: contain; }
 .property-hag-mobile .property-hag-backup-text { height: 40dvh; min-height: 100px; }
 
+/* Keep native table rows and columns on phones; wide detail tables can scroll. */
+.property-hag-mobile .property-hag-table { font-size: var(--font-ui-small); line-height: 1.4; }
+.property-hag-mobile .property-hag-table :is(th, td) { padding: 8px; }
+.property-hag-mobile .property-hag-table tbody tr { height: 44px; }
+.property-hag-mobile .property-hag-properties-table { width: 100%; min-width: 320px; table-layout: fixed; }
+.property-hag-mobile .property-hag-properties-table th:first-child { width: auto; }
+.property-hag-mobile .property-hag-properties-table th:nth-child(2) { width: 80px; }
+.property-hag-mobile .property-hag-properties-table th:nth-child(n+3) { width: 56px; }
+.property-hag-mobile .property-hag-properties-table td:first-child a { white-space: normal; overflow-wrap: anywhere; }
+.property-hag-mobile .property-hag-properties-table td:nth-child(2) { white-space: nowrap; }
+.property-hag-mobile .property-hag-navigation { margin-bottom: 8px; }
+.property-hag-mobile .property-hag-search { margin-bottom: 8px; }
+
 @media (max-width: 600px) {
   .property-hag-mobile .property-hag-hero { grid-template-columns: 1fr; gap: 12px; padding-bottom: 16px; }
   .property-hag-mobile .property-hag-logo { width: 100px; height: 110px; justify-self: center; }
   .property-hag-mobile .property-hag-home-actions { grid-template-columns: 1fr; }
   .property-hag-mobile .property-hag-introduction h1 { font-size: 28px; }
-  .property-hag-mobile .property-hag-table-container { overflow: visible; }
-  .property-hag-mobile .property-hag-table { display: block; width: 100%; min-width: 0; table-layout: auto; }
-  .property-hag-mobile .property-hag-table thead { display: block; position: sticky; top: 0; z-index: 3; background: var(--background-primary); }
-  .property-hag-mobile .property-hag-table thead tr { display: flex; flex-wrap: wrap; }
-  .property-hag-mobile .property-hag-table th { display: flex; align-items: center; position: static; min-height: 44px; flex: 1 1 auto; width: auto; padding: 8px; white-space: normal; border-right: 0; }
-  .property-hag-mobile .property-hag-table tbody { display: block; }
-  .property-hag-mobile .property-hag-table tbody tr { display: block; margin: 12px 0; padding: 8px; border: 1px solid var(--background-modifier-border); border-radius: var(--radius-m); }
-  .property-hag-mobile .property-hag-table td { display: block; width: auto; padding: 6px 8px; border: 0; text-align: left; white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; }
-  .property-hag-mobile .property-hag-table td::before { content: attr(data-hag-label); display: block; margin-bottom: 4px; color: var(--text-muted); font-size: var(--font-ui-small); font-weight: 600; }
-  .property-hag-mobile .property-hag-table td a { white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; }
-  .property-hag-mobile .property-hag-selection-table td:first-child { display: flex; align-items: center; gap: 8px; }
-  .property-hag-mobile .property-hag-selection-table td:first-child::before { margin-bottom: 0; }
   .property-hag-mobile .property-hag-help-content :is(th, td) { padding: 8px; }
 }
