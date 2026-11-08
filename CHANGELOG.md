@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.1.0 — 11-08-2026
+
+- Organize Batch actions into **Choose a change**, **Choose notes**, and **Review and apply**, with a plain-language batch summary.
+- Combine multiple property conditions using **All (AND)** or **Any (OR)**. Filter by properties independently of the property being edited, with existing name/value suggestions and eligibility rechecks before saving.
+- Infer filter value types where possible; show the type selector only for mixed or unknown types. Explain when filtering removes selected notes.
+- Keep Back/Help visible while scrolling every tool window, and keep batch review actions below that navigation row.
+- Explain common warnings in plain language with practical next steps, while retaining technical details in saved diagnostics.
+- Prevent cramped List properties windows when reopening a remembered search.
+- Preserve leading byte-order marks through verified reads, backups, and Undo, including Windows line endings.
+- Add hidden local smoke diagnostics with isolated test data, verified Apply/Undo, interrupted-write recovery, automatic cleanup, and native Markdown report export. Include multiple-filter Apply, persisted reload, and exact Undo coverage.
+- Fix temporary-folder cleanup on desktop adapters that report EISDIR for empty directories; retain unknown files for manual review.
+- Update screen help and README for the new batch workflow and filters.
+
 ## 1.0.1 — 10-27-2026
 
 - Fix oversized phone property cards: retain compact table rows and columns, with horizontal scrolling for wider tables. Desktop styling is unchanged.

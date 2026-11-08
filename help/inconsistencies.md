@@ -22,11 +22,11 @@ Use **Back** for the main menu. If indexing is incomplete, reopen this screen af
 
 Search is case-insensitive and matches parts of words. Use:
 
-- `toastmasters; tm` or `toastmasters OR tm` for either term.
-- `toastmasters AND speech` or `toastmasters speech` for both terms, in any order.
-- `toastmasters -archived` or `toastmasters NOT archived` to exclude archived matches.
-- `"public speaking"` for that exact phrase, with the words together.
+- `study; research` or `study OR research` for either term.
+- `study AND notes` or `study notes` for both terms, in any order.
+- `study -archived` or `study NOT archived` to exclude archived matches.
+- `"study notes"` for that exact phrase, with the words together.
 
-NOT/minus applies first, then AND, then OR/semicolon. For example, `toastmasters OR tm AND speech` matches toastmasters, or matches both tm and speech. To exclude archived results from both alternatives, use `toastmasters NOT archived OR tm NOT archived`. Operators also accept lowercase. Quote literal operator words or semicolons, such as `"AND"` or `"a;b"`.
+NOT/minus applies first, then AND, then OR/semicolon. For example, `study OR research AND notes` matches study, or matches both research and notes. To exclude archived results from both alternatives, use `study NOT archived OR research NOT archived`. Operators also accept lowercase. Quote literal operator words or semicolons, such as `"AND"` or `"a;b"`.
 
 An unfinished or invalid query shows an error and matches nothing. In Batch actions, selections that no longer match are cleared. These operators apply to search bars; property/value suggestion dropdowns and the typed **Match value** filter continue to use literal values. Search still uses each screen's existing fields; it does not search all note content.

@@ -1,6 +1,6 @@
 # Preview changes
 
-Review the selected notes before saving. The blue heading shows the planned operation.
+Review the selected notes before saving. The blue heading shows the planned operation. If you added property conditions, their summary appears below it.
 
 - **Before** — the current value.
 - **After** — the proposed value.
@@ -16,7 +16,7 @@ Search, sort, or open note links to review results. Use **Back** to adjust the b
 
 Choose **Apply changes…**, check the operation and note count, then confirm **Apply**. Nothing is saved before confirmation.
 
-Notes are rechecked, backed up, saved, and verified. Skipped and conflicting notes are left alone. Review the results for failures or notes needing attention.
+Notes and property conditions are rechecked before saving. Original content is backed up, then the saved result is verified. Skipped and conflicting notes are left alone. Review the results for failures or notes needing attention.
 
 Only affected property entries are edited; surrounding properties and note text are preserved. The changed entry's formatting may be adjusted. Complex layouts that cannot be edited safely become conflicts.
 
@@ -26,11 +26,11 @@ After applying a batch, use **Batch history / Undo** to review and undo saved ch
 
 Search is case-insensitive and matches parts of words. Use:
 
-- `toastmasters; tm` or `toastmasters OR tm` for either term.
-- `toastmasters AND speech` or `toastmasters speech` for both terms, in any order.
-- `toastmasters -archived` or `toastmasters NOT archived` to exclude archived matches.
-- `"public speaking"` for that exact phrase, with the words together.
+- `study; research` or `study OR research` for either term.
+- `study AND notes` or `study notes` for both terms, in any order.
+- `study -archived` or `study NOT archived` to exclude archived matches.
+- `"study notes"` for that exact phrase, with the words together.
 
-NOT/minus applies first, then AND, then OR/semicolon. For example, `toastmasters OR tm AND speech` matches toastmasters, or matches both tm and speech. To exclude archived results from both alternatives, use `toastmasters NOT archived OR tm NOT archived`. Operators also accept lowercase. Quote literal operator words or semicolons, such as `"AND"` or `"a;b"`.
+NOT/minus applies first, then AND, then OR/semicolon. For example, `study OR research AND notes` matches study, or matches both research and notes. To exclude archived results from both alternatives, use `study NOT archived OR research NOT archived`. Operators also accept lowercase. Quote literal operator words or semicolons, such as `"AND"` or `"a;b"`.
 
 An unfinished or invalid query shows an error and matches nothing. In Batch actions, selections that no longer match are cleared. These operators apply to search bars; property/value suggestion dropdowns and the typed **Match value** filter continue to use literal values. Search still uses each screen's existing fields; it does not search all note content.

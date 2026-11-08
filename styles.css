@@ -14,6 +14,8 @@
 .property-hag-window .modal-content {
   min-height: 0;
   overflow: auto;
+  --property-hag-navigation-height: 44px;
+  scroll-padding-top: calc(var(--property-hag-navigation-height) + 8px);
 }
 
 .property-hag-modal-resize {
@@ -87,11 +89,17 @@
 }
 
 .property-hag-navigation {
+  position: sticky;
+  top: 0;
+  z-index: 30;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 12px;
+  min-height: 44px;
+  background: var(--modal-background, var(--background-primary));
+  box-shadow: 0 1px 0 var(--background-modifier-border);
 }
 
 .property-hag-help-button {
@@ -479,6 +487,73 @@
   justify-content: space-between;
   margin-bottom: 16px;
   color: var(--text-accent);
+}
+
+.property-hag-additional-filter {
+  margin-bottom: 16px;
+  padding: 12px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s, 4px);
+}
+
+.property-hag-additional-filter > label {
+  cursor: pointer;
+}
+
+.property-hag-batch-section {
+  margin: 0 0 20px;
+  min-width: 0;
+}
+
+.property-hag-batch-section > h3 {
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  font-size: var(--font-ui-medium);
+}
+
+.property-hag-filter-card {
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s, 4px);
+  background: var(--background-secondary);
+  min-width: 0;
+}
+
+.property-hag-filter-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.property-hag-filter-card .property-hag-form {
+  margin-bottom: 0;
+}
+
+.property-hag-inferred-filter-value {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.property-hag-batch-intent {
+  padding: 12px;
+  margin: 0 0 12px;
+  border-left: 3px solid var(--interactive-accent);
+  background: var(--background-secondary);
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.property-hag-batch-toolbar {
+  position: sticky;
+  top: var(--property-hag-navigation-height, 44px);
+  z-index: 4;
+  padding: 10px 0;
+  background: var(--background-primary);
+  border-bottom: 1px solid var(--background-modifier-border);
 }
 
 .property-hag-scope > span {

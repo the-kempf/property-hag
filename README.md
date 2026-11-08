@@ -11,14 +11,14 @@ Stay in control of every change. Choose the notes, review what will happen, and 
 - **Bulk property editing** — add, update, rename, and remove
 - **Vault-wide property browsing and usage counts**
 - **List-item editing and empty-property cleanup**
-- **Advanced search and flexible filters**
+- **Advanced search and multiple property filters** — match all or any condition
 - **Existing property and value suggestions**
 - **Typo, formatting, and consistency checks**
 - **Before-and-after previews**
 - **Automatic backups, verified saves, and batch Undo**
 - **Desktop and mobile support**
 
-![Property Hag batch editor with note selection and change controls](assets/property-hag-batch-screenshot.jpg)
+![Property Hag batch editor with Choose a change and Choose notes sections](assets/property-hag-batch-screenshot.jpg)
 
 ## Installation
 
@@ -52,29 +52,34 @@ To work within a folder, open that folder’s context menu and choose **Batch Ed
 
 ## Making a batch change
 
-1. Check **Scope** to confirm where you’re working.
-2. Choose an **Operation** and **Property name**.
-3. Use **Find notes** and search to narrow the list.
-4. Choose an existing value or enter a new one when needed.
-5. Check the notes you want to change and choose **Preview changes**.
-6. Review the Before/After values and warnings, then choose **Apply changes…** and confirm.
+1. **Choose a change:** select the operation, property name, and any required values.
+2. **Choose notes:** check the scope, add property conditions, and narrow with search. Choose **All conditions (AND)** or **Any condition (OR)**.
+3. **Review and apply:** read the batch summary, select notes, and choose **Preview changes**. Review Before/After values, then confirm Apply.
 
-**Create property** adds a property only where it is missing. **Set property value** updates only notes that already have it. Removing a property never removes the note.
+Use **+ Add filter** to combine as many property conditions as needed. Each condition has a property, a comparison, and a typed value where needed. Existing names and values are suggested. Remove a condition with its **Remove** button.
 
-Unchecked notes are outside the batch. The skipped count refers to selected notes that require no change. Changing filters clears selections that no longer match; newly matching notes are not selected automatically.
+Filter value types are chosen automatically where possible. The type selector appears only for mixed or unknown types; conditions such as Exists and Is missing need no value.
+
+For example, filter **subcategory** to **peer-perspective**, then choose **Create property → status** and enter your desired value. Create only changes notes missing status. You can also add **status → Is missing** under All conditions to make that requirement explicit.
+
+**Create property** adds a property only where missing. **Set property value** updates only notes that already have it. These operation requirements, folder scope, and search always apply, even with Any condition. Removing a property never removes the note.
+
+Unchecked notes are outside the batch. Changing filters clears selections that no longer qualify and explains the removal; newly matching notes are not selected automatically. Invalid or incomplete conditions match nothing. Preview and Apply recheck the property conditions before writing.
 
 ## Searching
 
 Searches ignore capitalization and match parts of words. Search fields use the information shown on their screen, rather than searching every note’s full contents.
 
+In Batch actions, search matches note titles and the current value of the property being edited. Use the property condition cards to narrow by other properties.
+
 | Search | Finds |
 | --- | --- |
-| toastmasters; tm or toastmasters OR tm | Either term |
-| toastmasters AND speech or toastmasters speech | Both terms, in any order |
-| toastmasters -archived or toastmasters NOT archived | Toastmasters matches without archived |
-| "public speaking" | That exact phrase, with the words together |
+| study; research or study OR research | Either term |
+| study AND notes or study notes | Both terms, in any order |
+| study -archived or study NOT archived | Study matches without archived |
+| "study notes" | That exact phrase, with the words together |
 
-Exclusions apply first, then AND, then OR. To exclude a term from both alternatives, repeat it: **toastmasters NOT archived OR tm NOT archived**. Operators also accept lowercase. Put literal operator words or semicolons inside quotes, such as **"AND"** or **"a;b"**.
+Exclusions apply first, then AND, then OR. To exclude a term from both alternatives, repeat it: **study NOT archived OR research NOT archived**. Operators also accept lowercase. Put literal operator words or semicolons inside quotes, such as **"AND"** or **"a;b"**.
 
 An invalid or unfinished search shows an error and matches nothing. Property/value suggestions and the **Match value** filter use literal values rather than these search operators.
 
@@ -96,6 +101,8 @@ Mobile layouts and Apply/Undo flows have automated coverage. Physical Android an
 
 Click or tap **?** in any tool window for help. Use **Back** to return to the previous screen.
 
+The Back/Help navigation row stays visible at the top while you scroll a tool window, on desktop and mobile.
+
 ## File safety and limitations
 
 Keep a separate vault backup and try a small batch first. Previews do not save changes. Apply and Undo require confirmation, back up notes before writing, and verify the saved results.
@@ -112,7 +119,7 @@ Property Hag makes no network requests. History and backups are stored locally i
 
 ## Version
 
-Current version: **1.0.1**. See [CHANGELOG.md](CHANGELOG.md) for release notes.
+Current version: **1.1.0**. See [CHANGELOG.md](CHANGELOG.md) for release notes.
 
 ## Author
 
