@@ -119,7 +119,7 @@ Property Hag makes no network requests. History and backups are stored locally i
 
 ## Version
 
-Current version: **1.1.0**. See [CHANGELOG.md](CHANGELOG.md) for release notes.
+Current version: **1.1.1**. See [CHANGELOG.md](CHANGELOG.md) for release notes.
 
 ## Author
 

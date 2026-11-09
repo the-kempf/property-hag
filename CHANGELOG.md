@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1 — 11-09-2026
+
+- Use a smaller embedded logo, reducing the plugin download by about two-thirds while keeping the same artwork and three-file installation.
+- Retain the existing logo display size and transparent background.
+
 ## 1.1.0 — 11-08-2026
 
 - Organize Batch actions into **Choose a change**, **Choose notes**, and **Review and apply**, with a plain-language batch summary.
